@@ -1,10 +1,21 @@
 'use strict';
 
-let num1 = 10,
-    num2 = 11;
+const numberOfFilms = +prompt('How many movies have you seen so far ?', '');
 
-// num1++;
-// num2--;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-console.log(++num1);
-console.log(--num2);
+const a = prompt('One is last seen so far movies ?', ''),
+    b = prompt('How mach would you rate it ?', ''),
+    c = prompt('One is last seen so far movies ?', ''),
+    d = prompt('How mach would you rate it ?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
