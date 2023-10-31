@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const numberOfFilms = +prompt('How many movies have you seen so far ?', '');
@@ -19,3 +20,9 @@ personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);
+
+function changeFics() {
+    let name = 'Dima';
+    const age = '31';
+}
+
