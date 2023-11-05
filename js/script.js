@@ -1,41 +1,36 @@
 /* eslint-disable */
 'use strict';
 
-const customArray = {
-    name: 'car',
-    width: 192,
-    height: 10,
-    option: {
-        color: 'black',
-        gradient: 'purpul'
-    },
-    makeTest: function() {
-        console.log('test');
-    }
-};
+const arr = [1, 3, 4, 98, 57, 25];
 
-// delete customArray.makeTest;
-// console.log(customArray);
+// arr.sort(compareNum);
+// console.log(arr);
 
-// const {color, gradient} = customArray.option;
+// function compareNum(a, b) {
+//     return a - b;
+// }
 
-// console.log(color, gradient);
+// arr.pop();
+// arr.push(88);
+// console.log(arr);
 
-// customArray.makeTest();
+// arr[99] = 0;
+// console.log(arr.length);
 
-// console.log(Object.keys(customArray).length);
 
-let count = 0;
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// })
 
-for (let key in customArray) {
-    if (typeof(customArray[key]) === 'object') {
-        for (let i in customArray[key]) {
-            console.log(`Value ${i} is have properties ${customArray[key][i]}`);
-        }
-    } else {
-        console.log(`Value ${key} is have properties ${customArray[key]}`);
-        count++;
-    }
-}
+// for(let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
 
-console.log(count);
+// for (let key of arr) {
+//     console.log(key);
+// }
+
+const str = prompt("", "");
+const products = str.split(", "); //ARRAY
+console.log(products.join(", ")); //STRING
+
