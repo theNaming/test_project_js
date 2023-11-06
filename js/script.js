@@ -1,36 +1,114 @@
 /* eslint-disable */
 'use strict';
 
-const arr = [1, 3, 4, 98, 57, 25];
+// let a = 10,
+//     b = a;
 
-// arr.sort(compareNum);
-// console.log(arr);
+// b = b + 5;
 
-// function compareNum(a, b) {
-//     return a - b;
+// console.log(a); //10
+// console.log(b); //15
+
+
+
+// const obj = {
+//     a: 2,
+//     b: 3
+// };
+
+// const copyObj = obj; // передает ссылку
+// copyObj.a = 15;
+
+// console.log(obj); // a: 15, b: 3
+// console.log(copyObj); // a: 15, b: 3
+
+// criate new object # 1 for
+
+// function copy(mainObj) {
+//     let obj = {};
+
+//     for (let key in mainObj) {
+//         obj[key] = mainObj[key];
+//     }
+//     return obj;
 // }
 
-// arr.pop();
-// arr.push(88);
-// console.log(arr);
+// const number = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         y: 10,
+//         x: 15
+//     }
+// };
 
-// arr[99] = 0;
-// console.log(arr.length);
+// const newNumbers = copy(number);
+
+// newNumbers.b = 10; // new copy
+// newNumbers.c.y = 20; // don't copy becose { {} }
+
+// console.log(number);
+// console.log(newNumbers);
 
 
-// arr.forEach(function(item, i, arr) {
-//     console.log(`${i}: ${item} внутри массива ${arr}`);
-// })
+// criate new object # 2 Object.assign
 
-// for(let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
+// const createNumber = {
+//         a: 2,
+//         b: 15,
+//         c: {
+//             y: 10,
+//             x: 5
+//         }
+//     };
+
+// const add = {
+//     t: 10,
+//     m: 88
+// };
+
+// const clone = Object.assign(createNumber, add);
+// console.log(clone);
+
+// criate new array # 3
+
+// const array = [2, 4, 6, 7];
+// const newArray = array.slice();
+
+// newArray[1] = 'wewewewe';
+
+// console.log(array);
+// console.log(newArray);
+
+
+// criate new array # 4 ...spered 
+
+// const video = ['youtube', 'netflics', 'vk'],
+//       blogs = ['wordPress', 'bitrix', 'joomla'],
+//       praduction = [...video, ...blogs, 'feecbook', 'yandex.music'];
+
+// console.log(video);
+// console.log(blogs);
+// console.log(praduction);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
 // }
 
-// for (let key of arr) {
-//     console.log(key);
-// }
+// const num = [20, 40 , 60];
 
-const str = prompt("", "");
-const products = str.split(", "); //ARRAY
-console.log(products.join(", ")); //STRING
+// log(...num);
+
+const array = ['a', 'b'];
+const newArray = [...array];
+
+const q = {
+    a: 2,
+    b: 5,
+    c: 10
+};
+
+const newCopyQ = {...q};
 
