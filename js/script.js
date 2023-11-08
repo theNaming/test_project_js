@@ -1,257 +1,111 @@
 /* eslint-disable */
-// 'use strict';
+'use strict';
 
-// const numberOfFilms = +prompt('How many movies have you seen so far ?', '');
+// let a = 10,
+//     b = a;
 
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
+// b = b + 5;
+
+// console.log(a); //10
+// console.log(b); //15
+
+
+
+// const obj = {
+//     a: 2,
+//     b: 3
 // };
 
-// const a = prompt('One is last seen so far movies ?', ''),
-//     b = prompt('How mach would you rate it ?', ''),
-//     c = prompt('One is last seen so far movies ?', ''),
-//     d = prompt('How mach would you rate it ?', '');
+// const copyObj = obj; // передает ссылку
+// copyObj.a = 15;
 
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
+// console.log(obj); // a: 15, b: 3
+// console.log(copyObj); // a: 15, b: 3
 
-// console.log(personalMovieDB);
+// criate new object # 1 for
 
-// function changeFics() {
-//     let name = 'Dima';
-//     const age = '31';
-// }
+// function copy(mainObj) {
+//     let obj = {};
 
-
-// 'use strict';
-
-// function firstTask() {    
-//     // Пишем решение вот тут
-//     for(let i = 5; i <= 10; i++){
-//         console.log(i);        
+//     for (let key in mainObj) {
+//         obj[key] = mainObj[key];
 //     }
+//     return obj;
 // }
-// firstTask();
 
-// function secondTask() {
-//     point: for (let a = 20; a >= 10; a--) {
-//         if (a === 13) break point;
-//         console.log(a);
+// const number = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         y: 10,
+//         x: 15
 //     }
-// }
-// secondTask();
+// };
 
-// function thirdTask() { 
-//     for (let k = 2; k <= 10; k++){
-//         if (k % 2 == 0) {
-//             console.log(k);
+// const newNumbers = copy(number);
+
+// newNumbers.b = 10; // new copy
+// newNumbers.c.y = 20; // don't copy becose { {} }
+
+// console.log(number);
+// console.log(newNumbers);
+
+
+// criate new object # 2 Object.assign
+
+// const createNumber = {
+//         a: 2,
+//         b: 15,
+//         c: {
+//             y: 10,
+//             x: 5
 //         }
-//     }
+//     };
+
+// const add = {
+//     t: 10,
+//     m: 88
+// };
+
+// const clone = Object.assign(createNumber, add);
+// console.log(clone);
+
+// criate new array # 3
+
+// const array = [2, 4, 6, 7];
+// const newArray = array.slice();
+
+// newArray[1] = 'wewewewe';
+
+// console.log(array);
+// console.log(newArray);
+
+
+// criate new array # 4 ...spered 
+
+// const video = ['youtube', 'netflics', 'vk'],
+//       blogs = ['wordPress', 'bitrix', 'joomla'],
+//       praduction = [...video, ...blogs, 'feecbook', 'yandex.music'];
+
+// console.log(video);
+// console.log(blogs);
+// console.log(praduction);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
 // }
 
-// thirdTask();
+// const num = [20, 40 , 60];
 
-// for (let i = 2; i <= 16; i++) {
-//     if (i % 2 === 0) {
-//         continue;
-//     } else {
-//         console.log(i);
-//     }
-// }
+// log(...num);
 
-// let i = 2;
-// while (i < 16) {
-//     i++;
-//     if (i % 2) console.log(i);
-// }
-
-// function fifthTask() {
-//     const arrayOfNumbers = [];
-
-//     for (let i = 5; i < 11; i++) {
-//         arrayOfNumbers[i - 5] = i;
-//     }
-
-//     console.log(arrayOfNumbers);
-
-//     return arrayOfNumbers;
-// }
-
-// fifthTask();
+const array = ['a', 'b'];
+const newArray = [...array];
 
 
-// //(*) Продвинутые задания на использование циклов и условий
-
-// // Место для первой задачи
-// //Заполните новый массив (result) числами из старого (arr). Количество элементов в массиве можно получить как arr.length, а к элементам обращаемся все так же: arr[0], arr[1] и тд.
-// //Должен получиться точно такой же массив
-// function firstTask() {
-//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//     const arr = [3, 5, 8, 16, 20, 23, 50];
-//     const result = [];    
-
-
-//     for (let i = 0; i < arr.length; i++) {
-//         result[i] = arr[i];
-//     }        
-
-//     return result;
-// }
-// firstTask();
-
-// //Измените данный массив так, чтобы все числа были увеличены в 2 раза, а если попадается строка строка - то к ней было добавлено " - done".
-// //Для определения типа данных используйте typeof();
-// //Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ]
-
-// // Место для второй задачи
-// function secondTask() {
-//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//     const data = [5, 10, 'Shopping', 20, 'Homework'];    
-
-//     for (let i = 0; i < data.length; i++) {
-//         if (typeof(data[i]) === 'number') {
-//             data[i] = data[i] * 2;
-//         } else if (typeof(data[i]) === 'string') {
-//             data[i] = `${data[i]} - done`;
-//         }
-//     }   
-//     console.log(data);    
-//     return data;
-// }
-
-// secondTask();
-
-
-// // Место для третьей задачи
-// //Разверните массив data наоборот при помощи цикла и запишите данные в массив result.
-// //Должно получиться: [ 'Homework', 20, 'Shopping', 10, 5 ]
-
-// function thirdTask() {
-//     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
-//     const data = [5, 10, 'Shopping', 20, 'Homework'];
-//     const result = [];
-
-//     // Пишем решение вот тут
-//     for (let i = 1; i <= data.length; i++) {
-//         result[i - 1] = data[data.length - i];
-//     }  
-
-//     console.log(result)
-//     // Не трогаем
-//     return result;
-// }
-
-// thirdTask();
-
-// //(**) Задача на формирование фигуры
-
-// const lines = 5;
-// let result = '';
-
-// for (let i = 0; i < lines; i++) {
-//     for (let j = 0; j < lines - i; j++){
-//         result += ' ';
-//     }
-//     for (let j = 0; j < 2 * i + 1; j++){
-//         result += '*'
-//     }
-//     result += '\n';
-// }
-
-// console.log(result);
-
-
-// function firstTask() {
-//     // Пишем решение вот тут
-//     for (let i = 5; i <= 10; i++) {
-//         console.log(i);
-//     }
-// }
-// firstTask();
-
-// function secondTask() {
-//     point: for (let a = 20; a >= 10; a--) {
-//         if (a === 13) break point;
-//         console.log(a);
-//     }
-// }
-// secondTask();
-
-// function thirdTask() {
-//     for (let k = 2; k <= 10; k++) {
-//         if (k % 2 == 0) {
-//             console.log(k);
-//         }
-//     }
-// }
-
-// thirdTask();
-
-// for (let i = 2; i <= 16; i++) {
-//     if (i % 2 === 0) {
-//         continue;
-//     } else {
-//         console.log(i);
-//     }
-// }
-
-// let i = 2;
-// while (i < 16) {
-//     i++;
-//     if (i % 2) console.log(i);
-// }
-
-// function fifthTask() {
-//     const arrayOfNumbers = [];
-
-//     for (let i = 5; i < 11; i++) {
-//         arrayOfNumbers[i - 5] = i;
-//     }
-
-//     console.log(arrayOfNumbers);
-
-//     return arrayOfNumbers;
-// }
-
-// fifthTask();
-
-
-// const firstName = "qeschen open";
-
-// console.log(firstName.indexOf("w"));
-
-
-// const name = "Test connection";
-
-// console.log(name.slice(5, 15));
-// console.log(name.substring(5, 15));
-// console.log(name.substr(5, 5));
-
-// const num = 12.2;
-// console.log(Math.round(num));
-
-// const test = "12.2";
-// console.log(parseInt(test));  
-// console.log(parseFloat(test));
-
-
-
-/* Задание на урок:
-
-1) Первую часть задания повторить по уроку
-
-2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
-false - выводит в консоль главный объект программы
-
-3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
-"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
-genres
-
-P.S. Функции вызывать не обязательно*/
+// P.S. Функции вызывать не обязательно
 
 // 'use strict';
 
@@ -386,5 +240,14 @@ function fib(num) {
 
 fib(5)
 
+
+
+const q = {
+    a: 2,
+    b: 5,
+    c: 10
+};
+
+const newCopyQ = { ...q };
 
 
